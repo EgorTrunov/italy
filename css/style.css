@@ -1,0 +1,254 @@
+/* общие стили */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+}
+
+html {
+    width: 100%;
+    height: 4235px;
+    background-image: url(../img/italy_map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(0px, 738px) minmax(320px, 504px) minmax(0px, 738px);
+    grid-template-areas: "green main red";
+    gap: 0px 0px;
+    width: 100%;
+    height: 4235px;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 504px;
+    height: 100%;
+}
+
+.section {
+    margin: 0 auto;
+    grid-area: main;
+    width: 320px;
+}
+
+.block {
+    padding: 16px;
+    text-align: center;
+}
+
+input {
+    background: #E5E5E5;
+    margin-bottom: 16px;
+    padding: 5px 16px;
+    border: none;
+    border-radius: 89px;
+    color: #979797;
+    width: 100%;
+    height: 32px;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+/* цвета */
+
+.red {
+    grid-area: red;
+    background: rgba(255, 0, 0, 0.6);
+}
+
+.green {
+    grid-area: green;
+    background: rgba(2, 144, 68, 0.6);
+}
+
+.orange-color {
+    background-color: #F98000;
+    margin-top: -5px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.green-color {
+    background-color: #029044;
+}
+
+.blue-color {
+    background-color: #0C93A4;
+}
+
+.text-red {
+    color: #FF0000;
+}
+
+.text-burgundy {
+    color: #D51D21;
+}
+
+.text-black {
+    color: #000;
+}
+
+
+/* первая секция */
+
+.title {
+    margin: 0;
+    border-bottom: 19px solid #D51D21;
+    border-top: 19px solid #029044;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.big-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.img__caption {
+    color: #fff;
+}
+
+.block__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__text {
+    margin-bottom: 16px;
+}
+
+span {
+    color: #000;
+    font-weight: bold;
+}
+
+.button {
+    background: linear-gradient(0deg, rgba(213, 29, 33, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #FF0000;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    border-radius: 55px;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    width: 216px;
+    height: 100%;
+    text-shadow: 0px 2px 3px #D51D21;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.block__img {
+    position: relative;
+    top: 19px;
+    left: 11px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio__box div label {
+    margin-bottom: 16px;
+    color: black;
+    height: 20px;
+}
+
+.radio__box div:not(:last-child) {
+    margin-right: 16px;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"]:checked+label,
+input[type="radio"]:not(:checked)+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #E5E5E5;
+    border: 1px solid #dddddd;
+    width: 16px;
+    height: 16px;
+}
+
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    left: 5.5px;
+    top: 5px;
+    background-color: #0C93A4;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+}
+
+input[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+}
+
+input[type="radio"]:checked+label:after {
+    opacity: 1;
+}
+
+.block__text-attn {
+    font-weight: bold;
+    text-align: center;
+}
+
+.watermark {
+    background: url(../img/watermark.png) no-repeat center;
+}
